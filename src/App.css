@@ -1,0 +1,29 @@
+.stairs-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.stair {
+  flex: 1;
+  height: 100%;
+  background-color: black;
+  transform-origin: top;
+  animation: stairDown 0.4s ease forwards;
+}
+
+.stair-1 { animation-delay: 0s; }
+.stair-2 { animation-delay: 0.1s; }
+.stair-3 { animation-delay: 0.2s; }
+.stair-4 { animation-delay: 0.3s; }
+.stair-5 { animation-delay: 0.4s; }
+
+@keyframes stairDown {
+  0%   { transform: scaleY(1); }
+  100% { transform: scaleY(0); }
+}
