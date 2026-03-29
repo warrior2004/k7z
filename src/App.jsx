@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Agency from './pages/Agency'
 import Projects from './pages/Projects'
 import './App.css'
+import Navbar from './components/Navigation/Navbar'
 
 const Stairs = () => (
   <div className='stairs-container'>
@@ -25,7 +26,8 @@ const App = () => {
   }, [location.pathname])                         // triggers on every route change
 
   return (
-    <div>
+    <div className='app-wrapper'>
+      <Navbar />
       {isAnimating && <Stairs />}
       <Routes>
         <Route path='/' element={<Home />}/>
