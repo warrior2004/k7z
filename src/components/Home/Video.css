@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'title';
+    src: url('../../../public/Fonts/LacheyardScript_PERSONAL_USE_ONLY.otf');
+}
+
+@font-face {
+    font-family: 'button';
+    src: url('../../../public/Fonts/Shelten.ttf');
+}
+
+.video{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-text{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.first{
+    font-size: 8rem;
+    font-family: title;
+    line-height: 1;
+}
+
+.second {
+  font-size: 8rem;
+  font-family: title;
+  display: flex;
+  align-items: center;  /* vertically aligns video with text */
+  gap: 1.5rem;          /* space between words and video */
+  line-height: 1;
+}
+
+.second .small-video {
+  width: 200px;         /* fixed width for the video */
+  height: 100px;        /* fixed height for the video */
+  border-radius: 50px;  /* pill shape */
+  overflow: hidden;     /* clips video to the shape */
+}
+
+.second .small-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* fills the box without distortion */
+}
+
+
+.third {
+  font-size: 8rem;
+  font-family: title;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 3rem;             /* sticks buttons to the bottom */
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 1rem 1.5rem;
+  font-size: 3rem;
+  background-color: transparent;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 2px solid white;
+  font-family: button;
+  text-align: center;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  color: #AAFF00;
+  border-color: #AAFF00;
+  transition: all 0.3s ease;
+}
+
+
