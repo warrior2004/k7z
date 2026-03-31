@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useNavigate } from 'react-router-dom'
 import './Services.css'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -47,6 +48,7 @@ const services = [
 const Services = () => {
   const headingRef = useRef(null)
   const cardsRef = useRef([])
+  const navigate = useNavigate()
 
   useEffect(() => {
     // heading animation
@@ -122,7 +124,7 @@ const Services = () => {
       {/* bottom cta */}
       <div className='services-cta'>
         <h2>Ready to work with us?</h2>
-        <button className='cta-btn'>Get In Touch</button>
+        <button className='cta-btn' onClick={() => navigate('/contact')}>Get In Touch</button>
       </div>
 
     </div>

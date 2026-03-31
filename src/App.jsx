@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Agency from './pages/Agency'
 import Projects from './pages/Projects'
 import Services from './pages/Services'
+import Contact  from './pages/Contact'
 import './App.css'
 import Navbar from './components/Navigation/Navbar'
 
@@ -35,6 +36,7 @@ const App = () => {
         <Route path='/agency' element={<Agency />}/>
         <Route path='/projects' element={<Projects />} />
         <Route path='/services' element={<Services />} />
+        <Route path='/contact' element={<Contact />} />
       </Routes>
     </div>
   )
