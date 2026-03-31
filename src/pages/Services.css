@@ -1,0 +1,165 @@
+@font-face {
+  font-family: 'button';
+  src: url('../../../public/Fonts/Shelten.ttf');
+}
+
+.services-page {
+  background-color: #f5f5f0;
+  min-height: 100vh;
+}
+
+/* hero */
+.services-hero {
+  padding-top: 12rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.services-label {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: rgba(0, 0, 0, 0.4);
+  margin-bottom: 1rem;
+}
+
+.services-hero h1 {
+  font-size: 8rem;
+  font-family: button;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0 0 2rem 0;
+  letter-spacing: 2px;
+}
+
+.services-hero h1 .italic {
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.services-sub {
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.6);
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+/* grid */
+.services-grid {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.service-card {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 4rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/* alternate image left and right */
+.service-card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.service-image {
+  width: 400px;
+  height: auto;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-card:hover .service-image img {
+  transform: scale(1.05);
+}
+
+.service-content {
+  flex: 1;
+}
+
+.service-number {
+  font-size: 0.9rem;
+  letter-spacing: 4px;
+  color: rgba(0, 0, 0, 0.3);
+  font-family: button;
+}
+
+.service-content h2 {
+  font-size: 3rem;
+  font-family: button;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0.5rem 0 1rem 0;
+  line-height: 1;
+}
+
+.service-content p {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.8;
+  max-width: 450px;
+}
+
+.service-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: black;
+  transition: gap 0.3s ease;
+}
+
+.service-card:hover .service-btn {
+  gap: 1rem;    /* arrow moves right on hover */
+}
+
+/* cta */
+.services-cta {
+  padding: 8rem 4rem;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.services-cta h2 {
+  font-size: 5rem;
+  font-family: button;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 3rem;
+}
+
+.cta-btn {
+  padding: 1rem 3rem;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: white;
+  color: black;
+}

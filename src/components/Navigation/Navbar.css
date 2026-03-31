@@ -20,6 +20,10 @@
 .svg-white { fill: white; }
 .svg-black { fill: black; }
 
+.navbar-hidden {
+  transform: translateY(-100%);
+}
+
 .nav-btn {
   position: relative;
   padding: 1rem;

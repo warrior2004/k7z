@@ -5,10 +5,10 @@ import { useNavigate } from 'react-router-dom'
 const FullScreenNav = ({ onClose }) => {
     const navigate = useNavigate()
   const links = [
-    { title: 'PROJECTS', sub: 'Pour Tout Voir', img: '/Images/image5.jpg', path: '/projects' },
-    { title: 'AGENCY', sub: 'Notre Histoire', img: '/Images/image1.jpg', path: '/agency' },
-    { title: 'SERVICES', sub: 'Ce Que Nous Faisons', img: '/Images/image2.jpg', path: '/services' },
-    { title: 'CONTACT', sub: 'Travaillons Ensemble', img: '/Images/image4.jpg', path: '/contact' },
+    { title: 'MODELS', sub: 'Pour Tout Voir',  path: '/projects' },
+    { title: 'AGENCY', sub: 'Notre Histoire',  path: '/agency' },
+    { title: 'SERVICES', sub: 'Ce Que Nous Faisons', path: '/services' },
+    { title: 'CONTACT', sub: 'Travaillons Ensemble', path: '/contact' },
   ]
 
   const handleNavigate = (path) => {
@@ -48,7 +48,6 @@ const FullScreenNav = ({ onClose }) => {
                 {[...Array(6)].map((_, i) => (
                   <span key={i} className='marquee-item'>
                     <h1>{link.title}</h1>
-                    <img src={link.img} alt={link.title} />
                     <h2>{link.sub}</h2>
                   </span>
                 ))}

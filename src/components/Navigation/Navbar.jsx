@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from 'react-router-dom'
 import './Navbar.css'
 import FullScreenNav from "./FullScreenNav";
@@ -19,6 +19,19 @@ const Navbar = () => {
     const location = useLocation()
     const [isOpen, setIsOpen] = useState(false)
     const [isAnimating, setIsAnimating] = useState(false)
+    const [hidden, setHidden] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if(window.scrollY > 120){
+                setHidden(true)
+            } else {
+                setHidden(false)
+            }
+        }
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
 
     const handleOpen = () => {
         setIsAnimating(true)
@@ -43,7 +56,7 @@ const Navbar = () => {
     return (
         <>
             {isAnimating && <Stairs />}
-            <div className="navbar">
+            <div className={`navbar ${hidden ? 'navbar-hidden' : ''}`}>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="103"

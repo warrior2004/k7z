@@ -145,11 +145,3 @@
   white-space: nowrap;
   margin: 0;
 }
-
-
-.marquee-item img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 30px;
-}
